@@ -8,7 +8,7 @@ Check out [Discord](https://discord.gg/Zvf2RBwE) and [Telegram](https://t.me/+U5
 
 > These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
 
-## Table Of Contents
+## Table of contents
 
 - [Code of Conduct](#code-of-conduct)
 
@@ -44,7 +44,7 @@ Check out [Discord](https://discord.gg/Zvf2RBwE) and [Telegram](https://t.me/+U5
 
   - [Issue and Pull Request Labels](#issue-and-pull-request-labels)
 
-## **Code of Conduct**
+## **Code of conduct**
 
 ###### [Table Of Contents](#table-of-contents)
 
@@ -128,11 +128,11 @@ In short I'd like to have a completly open source hardware and software developm
 
 Think about it like a collection of ideas and projects within a network of entrepreneurs, developers and makers.
 
-## **How Can I Contribute?**
+## **How can I contribute?**
 
 ###### [Table Of Contents](#table-of-contents)
 
-### **Reporting Bugs**
+### **Reporting bugs**
 
 > This section guides you through submitting a bug report for any repo in Werewolf Solutions. Following these guidelines helps maintainers and the community understand your report :pencil:, reproduce the behavior :computer:, and find related reports :mag_right:.
 
@@ -142,7 +142,7 @@ Fill out [the required template](https://github.com/Werewolf-Solutions/.github/t
 
 > **Note:** If you find a **Closed** issue that seems like it is the same thing that you're experiencing, open a new issue and include a link to the original issue in the body of your new one.
 
-#### Before Submitting A Bug Report
+#### Before submitting a bug report
 
 <!--
 TODO: create https://werewolf.solutions/FAQ
@@ -153,7 +153,7 @@ TODO: create https://werewolf.solutions/FAQ
 - **Determine [which repository the problem should be reported in](#werewolf-solutions-structure)**.
 - **Perform a [cursory search](https://github.com/search?q=+is%3Aissue+user%3AWerewolf-Solutions)** to see if the problem has already been reported. If it has **and the issue is still open**, add a comment to the existing issue instead of opening a new one.
 
-### **How Do I Submit A (Good) Bug Report?**
+### **How do I submit a (good) bug report?**
 
 ###### [Table Of Contents](#table-of-contents)
 
@@ -199,7 +199,7 @@ Include details about your configuration and environment:
 
 - **Are you using the app with multiple monitors?** If so, can you reproduce the problem when you use a single monitor?
 
-### **Suggesting Enhancements**
+### **Suggesting enhancements**
 
 ###### [Table Of Contents](#table-of-contents)
 
@@ -207,7 +207,7 @@ This section guides you through submitting an enhancement suggestion for the app
 
 Before creating enhancement suggestions, please check [this list](#before-submitting-an-enhancement-suggestion) as you might find out that you don't need to create one. When you are creating an enhancement suggestion, please [include as many details as possible](#how-do-i-submit-a-good-enhancement-suggestion). Fill in [the template](https://github.com/Werewolf-Solutions/.github/tree/main/profile/NEW_FEATURE.md), including the steps that you imagine you would take if the feature you're requesting existed.
 
-### **Before Submitting An Enhancement Suggestion**
+### **Before submitting an enhancement suggestion**
 
 <!--
 - **Check the [debugging guide](https://werewolf.solutions/docs/debugging-guide)** for tips — you might discover that the enhancement is already available
@@ -219,7 +219,7 @@ Before creating enhancement suggestions, please check [this list](#before-submit
 
 - **Perform a [cursory search](https://github.com/search?q=+is%3Aissue+user%3AWerewolf-Solutions)** to see if the enhancement has already been suggested. If it has, add a comment to the existing issue instead of opening a new one.
 
-### **Submit Enhancement Suggestion**
+### **Submit enhancement suggestion**
 
 ###### [Table Of Contents](#table-of-contents)
 
@@ -241,7 +241,7 @@ Enhancement suggestions are tracked as [GitHub issues](https://guides.github.com
 
 - **Specify which version of the app you're using.**
 
-### **Your First Code Contribution**
+### **Your first code contribution**
 
 ###### [Table Of Contents](#table-of-contents)
 
@@ -261,7 +261,7 @@ If you want to read about using the app or developing packages in the app, the [
 
 The app Core and all softwares can be developed locally. For instructions on how to do this, see the [README](https://github.com/Werewolf-Solutions/werewolf-website)
 
-### Pull Requests
+### Pull requests
 
 ###### [Table Of Contents](#table-of-contents)
 
@@ -289,7 +289,7 @@ While the prerequisites above must be satisfied prior to having your pull reques
 
 ## Styleguides
 
-### Git Commit Messages
+### Git commit messages
 
 - Use the present tense ("Add feature" not "Added feature")
 - Use the imperative mood ("Move cursor to..." not "Moves cursor to...")
@@ -320,7 +320,7 @@ While the prerequisites above must be satisfied prior to having your pull reques
 
 -->
 
-### JavaScript Styleguide
+### JavaScript styleguide
 
 <!--
 TODO:
@@ -330,9 +330,11 @@ TODO:
 - add JS styleguide
 -->
 
-## Additional Notes
+## Additional notes
 
-#### Type of Issue and Issue State
+#### Issue and pull request labels
+
+###### [Table Of Contents](#table-of-contents)
 
 | Label name         | `Werewolf Solutions`:mag_right:                                                                               | Description                                |
 | ------------------ | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
