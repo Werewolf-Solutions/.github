@@ -52,13 +52,13 @@ This project and everyone participating in it is governed by the [Werewolf Code 
 
 > **Note:** Please don't file an issue to ask a question. You'll get faster results by using the resources below.
 
-```
+<!--
 TODO: add FAQ, forum in werewolf.solutions
 
 We have an official message board with a detailed FAQ and where the community chimes in with helpful advice if you have questions.
 
 * [FAQ](https://werewolf.solutions/FAQ)
-```
+-->
 
 If chat is more your speed, you can join the team:
 
@@ -87,13 +87,13 @@ If chat is more your speed, you can join the team:
 
   - [utils](https://github.com/Werewolf-Solutions/werewolf-website/tree/master/utils): this is where I do counting function (but I need to change it into it's on submodule? or something) and I have all the helpers like math, handle dates, etc.
 
-  **_OLD_**
+  > **_OLD_**
+  >
+  > - [accounting](https://github.com/Werewolf-Solutions/accounting): this is a software written in JS that gets a budget and does the accounting.
 
-  - [accounting](https://github.com/Werewolf-Solutions/accounting): this is a software written in JS that gets a budget and does the accounting.
+  > - [trading-bot](https://github.com/Werewolf-Solutions/trading-bot): this is the trading-bot software that allows to connect to multiple exchanges and trade in an automatic way with your own strategies.
 
-  - [trading-bot](https://github.com/Werewolf-Solutions/trading-bot): this is the trading-bot software that allows to connect to multiple exchanges and trade in an automatic way with your own strategies.
-
-  - [helpers](https://github.com/Werewolf-Solutions/helpers): this is the library to handle math, dates, arrays and all other stuff we need
+  > - [helpers](https://github.com/Werewolf-Solutions/helpers): this is the library to handle math, dates, arrays and all other stuff we need
 
 - frontend (React)
 
@@ -117,11 +117,12 @@ If chat is more your speed, you can join the team:
 
 ### **What is Werewolf Solutions?**
 
-```
+<!--
 TODO: finish white-paper
 
 Check the [white paper](https://werewolf.solutions/white-paper) to have an in depth understanding of what [Werewolf Solutions](https://werewolf.solutions) aims to be.
-```
+
+-->
 
 In short I'd like to have a completly open source hardware and software development company, governed by a DAO, where everyone can collaborate to create solutions to make the world a better place.
 
@@ -143,10 +144,11 @@ Fill out [the required template](https://github.com/Werewolf-Solutions/.github/t
 
 #### Before Submitting A Bug Report
 
-```
+<!--
 TODO: create https://werewolf.solutions/FAQ
 - **Check the [FAQs on the forum](https://werewolf.solutions/FAQ)** for a list of common questions and problems.
-```
+
+-->
 
 - **Determine [which repository the problem should be reported in](#werewolf-solutions-structure)**.
 - **Perform a [cursory search](https://github.com/search?q=+is%3Aissue+user%3AWerewolf-Solutions)** to see if the problem has already been reported. If it has **and the issue is still open**, add a comment to the existing issue instead of opening a new one.
@@ -207,11 +209,11 @@ Before creating enhancement suggestions, please check [this list](#before-submit
 
 ### **Before Submitting An Enhancement Suggestion**
 
-```
+<!--
 - **Check the [debugging guide](https://werewolf.solutions/docs/debugging-guide)** for tips — you might discover that the enhancement is already available
-```
+-->
 
-- **Check if there's already a branch or someone working on it on [Trello roadmap](https://trello.com/b/V4uGaQJV/werewolf-solutions-roadmap) or [Discord](https://discord.gg/Zvf2RBwE).**
+- **Check if there's already a branch or someone working on it on [Trello roadmap](https://trello.com/b/V4uGaQJV/werewolf-solutions-roadmap), [Discord](https://discord.gg/Zvf2RBwE) and in the right [repo](#werewolf-solutions-structure).**
 
 - **Determine [which repository the enhancement should be suggested in](#werewolf-solutions-structure).**
 
@@ -243,7 +245,7 @@ Enhancement suggestions are tracked as [GitHub issues](https://guides.github.com
 
 ###### [Table Of Contents](#table-of-contents)
 
-```
+<!--
 TODO: write github issues labels
 
 Unsure where to begin contributing to the app? You can start by looking through these `beginner` and `help-wanted` issues:
@@ -253,7 +255,7 @@ Unsure where to begin contributing to the app? You can start by looking through 
 - [Help wanted issues][help-wanted] - issues which should be a bit more involved than `beginner` issues.
 
 If you want to read about using the app or developing packages in the app, the [debugging guide](https://werewolf.solutions/docs/debugging-guide) is free and available online.
-```
+-->
 
 #### Local development
 
@@ -292,12 +294,10 @@ While the prerequisites above must be satisfied prior to having your pull reques
 - Limit the first line to 72 characters or less
 - Reference issues and pull requests liberally after the first line
 
-```
+<!--
 ??
 - When only changing documentation, include `[ci skip]` in the commit title
-```
 
-```
 ??
 - Consider starting the commit message with an applicable emoji:
   - :art: `:art:` when improving the format/structure of the code
@@ -315,17 +315,18 @@ While the prerequisites above must be satisfied prior to having your pull reques
   - :arrow_up: `:arrow_up:` when upgrading dependencies
   - :arrow_down: `:arrow_down:` when downgrading dependencies
   - :shirt: `:shirt:` when removing linter warnings
-```
+
+-->
 
 ### JavaScript Styleguide
 
-```
+<!--
 TODO:
 
 - add VScode config, like prettier, highlighting, ...
 
 - add JS styleguide
-```
+-->
 
 ## Additional Notes
 
