@@ -2,7 +2,7 @@
 
 The following is a set of guidelines for contributing to Werewolf Solutions, its softwares, libraries and so on, which are hosted in [Werewolf Solutions](https://github.com/Werewolf-Solutions) organization on GitHub.
 
-You can check out the roadmap on [Trello](https://trello.com/b/V4uGaQJV/werewolf-solutions-roadmap).
+You can check out the roadmap on [Trello](https://trello.com/b/V4uGaQJV/werewolf-solutions-roadmap){:target="\_blank"}.
 
 Check out [Discord](https://discord.gg/Zvf2RBwE) and [Telegram](https://t.me/+U5HeS5RfvENJKxWo).
 
