@@ -8,6 +8,8 @@ Check out [Discord](https://discord.gg/Zvf2RBwE) and [Telegram](https://t.me/+U5
 
 > These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
 
+<div id="table-of-contents"></div>
+
 ## Table of contents
 
 - [Code of Conduct](#code-of-conduct)
@@ -131,6 +133,34 @@ Think about it like a collection of ideas and projects within a network of entre
 ## **How can I contribute?**
 
 ###### [Table Of Contents](#table-of-contents)
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+**1. Fork the Project**
+
+- Create your Branch
+
+  - New Feature (`git checkout -b feature/AmazingFeature`)
+  - Bug Fix (`git checkout -b bugfix/SomethingToFix`)
+
+- Commit your Changes (`git commit -m 'Add some AmazingFeature'` or `git commit -m 'Fix SomethingToFix'`)
+
+- Push to the Branch (`git push origin feature/AmazingFeature` or `git checkout -b bugfix/SomethingToFix`)
+
+- Open a Pull Request
+
+**2. Work on an existing branch**
+
+- Update all the branches (`git fetch --all`)
+
+- Checkout to that branch (`git checkout branch_name`)
+
+- Update to the latest (`git pull`)
+
+- **contact the dev to see what's the best way to work together**
 
 ### **Reporting bugs**
 
@@ -335,6 +365,8 @@ TODO:
 #### Issue and pull request labels
 
 ###### [Table Of Contents](#table-of-contents)
+
+<p align="right"><a href="#table-of-contents">Table Of Contents</a></p>
 
 | Label name         | `Werewolf Solutions`:mag_right:                                                                               | Description                                |
 | ------------------ | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
