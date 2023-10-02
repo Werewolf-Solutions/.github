@@ -16,7 +16,7 @@ Check out [Discord](https://discord.gg/Zvf2RBwE) and [Telegram](https://t.me/+U5
 
 - [What should I know before I get started?](#what-should-i-know-before-i-get-started)
 
-  - [Werewolf Solutions structure](#werewolf-solutions-structure)
+  - [Werewolf Dapp structure](#werewolf-dapp-structure)
 
   - [What is Werewolf Solutions?](#what-is-werewolf-solutions)
 
@@ -75,47 +75,216 @@ If chat is more your speed, you can join the team:
 
 ---
 
-### **Werewolf Solutions structure**
+### **Werewolf Dapp structure**
 
-- backend (Mongo DB, express, node.js)
+- React App
 
-  > **Note:** for now accounting function is [here](https://github.com/Werewolf-Solutions/werewolf-website/blob/e7e131df4b52fcdc530604b0eaeb82943f169d66/utils/counting.js#L62). Trading-bot instead is old and needs to be integrated with main API like e-commerce. For API docs go [here](https://github.com/Werewolf-Solutions/werewolf-website).
+  ```
+    src/
+    |-- apiCalls/
+    |   |-- api.js                  # Contains functions for making custom API calls (e.g., to localhost:5000/api)
+    |-- assets/
+    |   |-- images/                 # Store image files
+    |   |-- files/                  # Store other types of files (e.g., PDFs, documents)
+    |   |-- videos/                 # Store video files
+    |-- components/
+    |   |-- Modals                  # Reusable header component
+    |   |-- Buttons                 # Reusable footer component
+    |   |-- ...                     # Other reusable components (Logo, ...)
+    |-- layout/
+    |   |-- Header                  # Reusable header component
+    |   |-- Footer                  # Reusable footer component
+    |-- pages/
+    |   |-- Home                    # Page component for the home page
+    |   |-- AboutUs                 # Page component for the about page
+    |   |-- ContactUs               # Page component for the contact page
+    |   |-- ...                     # Other page components
+    |-- App.js                      # The main application component
+    |-- index.js                    # Entry point for your React app
+    |-- App.css                     # Global styles for the app
+    |-- ...
+  ```
 
-  - [config](https://github.com/Werewolf-Solutions/werewolf-website/tree/master/config): this is where you have db connection and passport.js configs
+  - apiCalls/: This directory contains modules for making API calls to your custom API. It helps keep your API-related logic organized and separate from your components.
 
-  - [controllers](https://github.com/Werewolf-Solutions/werewolf-website/tree/master/controllers): this is where all the routes controllers are
+  - assets/: This directory is used to store static assets such as images, files, and videos that your application may need. Keeping them here makes it easier to manage and reference these assets in your code.
 
-  - [DB models](https://github.com/Werewolf-Solutions/werewolf-website/tree/master/models): DB models
+  - components/: This directory holds reusable components that can be used across different pages and layouts in your application. Examples include Header, Footer, Buttons, and Input components.
 
-  - [utils](https://github.com/Werewolf-Solutions/werewolf-website/tree/master/utils): this is where I do counting function (but I need to change it into it's on submodule? or something) and I have all the helpers like math, handle dates, etc.
+  - layout/: Layout components define the overall structure of your app, such as the main layout that wraps your pages. You can have multiple layout components if your app has different layouts for different sections.
 
-  > **_OLD_**
-  >
-  > - [accounting](https://github.com/Werewolf-Solutions/accounting): this is a software written in JS that gets a budget and does the accounting.
+  - pages/: Page components represent different views or pages of your application. Each page component typically corresponds to a specific route or URL. Examples include Home, About, Contact, and other pages specific to your app.
 
-  > - [trading-bot](https://github.com/Werewolf-Solutions/trading-bot): this is the trading-bot software that allows to connect to multiple exchanges and trade in an automatic way with your own strategies.
+  - App.js: This is the main application component where you set up routing, global state management, and the overall structure of your app.
 
-  > - [helpers](https://github.com/Werewolf-Solutions/helpers): this is the library to handle math, dates, arrays and all other stuff we need
+    ```jsx
+    import { Outlet } from "react-router-dom";
+    import Header from "./layout/Header/Header";
+    import Footer from "./layout/Footer/Footer";
 
-- frontend (React)
+    import "./app.css";
 
-  - [Accounting](https://github.com/Werewolf-Solutions/werewolf-website/tree/master/public/src/Components/Accounting): this contains everything is in the accounting page
+    function App() {
+      return (
+        <>
+          <div className="background-image" />
+          {/* <PopUp /> */}
+          <Header />
+          <div className="content">
+            <Outlet />
+          </div>
+          <Footer />
+        </>
+      );
+    }
 
-  - [Auth](https://github.com/Werewolf-Solutions/werewolf-website/tree/master/public/src/Components/Auth): this contains everything about sign-in/up
+    export default App;
+    ```
 
-  - [Body](https://github.com/Werewolf-Solutions/werewolf-website/tree/master/public/src/Components/Body): you need to go here only if you want to add another page to the app
+  - index.js: The entry point of your React application, where you render the App component and mount it to the DOM.
 
-  - [Footer](https://github.com/Werewolf-Solutions/werewolf-website/tree/master/public/src/Components/Footer): this contains everything is in the footer
+    ```jsx
+    import React from "react";
+    import ReactDOM from "react-dom/client";
+    import "./index.css";
+    import ContactUs from "./pages/ContactUs.jsx/ContactUs";
+    import AboutUs from "./pages/AboutUs/AboutUs";
+    import { createBrowserRouter, RouterProvider } from "react-router-dom";
+    import ErrorPage from "./layout/ErrorPage/ErrorPage";
+    import App from "./App";
+    import Home from "./pages/Home/Home";
+    import Admin from "./pages/Admin/Admin";
+    import SignIn from "./pages/Auth/SignIn";
+    import SignUp from "./pages/Auth/SignUp";
 
-  - [Header](https://github.com/Werewolf-Solutions/werewolf-website/tree/master/public/src/Components/Header): this contains everything is in the header
+    const router = createBrowserRouter([
+      {
+        path: "/",
+        element: <App />,
+        errorElement: <ErrorPage />,
+        children: [
+          {
+            path: "/",
+            element: <Home />,
+          },
+          {
+            path: "/contact-us",
+            element: <ContactUs />,
+          },
+          {
+            path: "/about-us",
+            element: <AboutUs />,
+          },
+          {
+            path: "/admin",
+            element: <Admin />,
+          },
+          {
+            path: "/sign-in",
+            element: <SignIn />,
+          },
+          {
+            path: "/sign-up",
+            element: <SignUp />,
+          },
+        ],
+      },
+    ]);
 
-  - [Home](https://github.com/Werewolf-Solutions/werewolf-website/tree/master/public/src/Components/Home): this contains everything is in the home page
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(
+      <React.StrictMode>
+        <RouterProvider router={router} />
+      </React.StrictMode>
+    );
+    ```
 
-  - [Menu drawer](https://github.com/Werewolf-Solutions/werewolf-website/tree/master/public/src/Components/MenuDrawer): this contains everything is in the menu drawer
+  - App.css: Global styles for your app that can be shared across components.
 
-  - [Offers](https://github.com/Werewolf-Solutions/werewolf-website/tree/master/public/src/Components/Offers): this contains everything is in the offers in home page
+* backend
 
-  - [Api calls](https://github.com/Werewolf-Solutions/werewolf-website/tree/master/public/src/apiCalls): this contains all the api calls
+  ```
+    e-commerce/
+    |-- bin/
+    |-- config/
+    |   |-- db.js                       # Database configuration
+    |-- controllers/                    # API Controllers
+    |-- middleware/                     # Middlewares
+    |-- models/                         # Mongoose schema
+    |-- public/                         # React app
+    |-- routes/                         # API routes
+    |   |-- api/
+    |   |   |-- v1/
+    |   |   |   |-- auth.js             # API routes for authentication
+    |   |   |   |-- payments.js         # API routes for payments
+    |   |   |-- index.js                # API routes entry point
+    |-- services/                       # Services
+    |-- utils/                          # Utilities
+    |-- .env_sample                     # Sample environment variables file
+    |-- app.js                          # Express.js application setup
+    |-- package.json                    # Dependencies and scripts
+    |-- README.md                       # Project documentation
+    |-- ...
+  ```
+
+  - controllers/paymentsController.js
+
+  ```javascript
+    const createPaymentIntentController = async () {
+        // If stripe
+        stripeCreatePaymentIntent()
+        // If Paypal
+
+        // If crypto
+
+        // ...
+  }
+  ```
+
+  - services/stripePaymentsService.js
+
+  ```javascript
+    const stripeCreatePaymentIntent = async () {
+        try {
+            let user;
+            if (req.session && req.session.passport && req.session.passport.user) {
+            user = await User.findById(req.session.passport.user);
+            }
+            const { amount, currency, paymentMethod, customer } = req.body;
+
+            const payment_intent = await stripe.paymentIntents.create({
+            amount,
+            currency,
+            payment_method: paymentMethod,
+            customer,
+            });
+
+            if (user) {
+            const existingPaymentIntent = user.payment_intents.find(
+                (intent) => intent.id === payment_intent.id
+            );
+            if (existingPaymentIntent) {
+                return res.json({ error: "Payment intent already exists" });
+            }
+
+            user.payment_intents.push(payment_intent);
+
+            await user.save();
+            }
+
+            res.json({ payment_intent });
+        } catch (error) {
+            console.log(error);
+            res.status(500).json({ error: error.message });
+        }
+  }
+  ```
+
+  - routes/api/v1/payments.js
+
+  ```javascript
+  router.post("/create-payment-intent", createPaymentIntentController);
+  ```
 
 ### **What is Werewolf Solutions?**
 
